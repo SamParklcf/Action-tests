@@ -14,6 +14,8 @@ jobs:
     steps:
     - name: Checkout project
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
      
     - name: List all projects
       run: dotnet sln ./ClassLibrary1/ClassLibrary1.sln list
@@ -34,3 +36,6 @@ jobs:
       
     - name: Pack ClassLibrary1
       run: dotnet pack --output nupkgs --configuration Release ./ClassLibrary1/ClassLibrary1.csproj
+      
+    - name: Push packages
+      run: dotnet nuget push nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json
