@@ -13,7 +13,7 @@ jobs:
     
     steps:
     - name: List all projects
-      run: dotnet sln ClassLibrary1/ClassLibrary1.sln list
+      run: dotnet sln ./ClassLibrary1/ClassLibrary1.sln list
     
     - uses: actions/checkout@v3
     - name: Setup .NET
