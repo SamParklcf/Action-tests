@@ -38,4 +38,4 @@ jobs:
       run: dotnet pack --output ./nupkgs --configuration Release ./ClassLibrary1/ClassLibrary1.csproj
       
     - name: Push packages
-      run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.APIKEY}}
+      run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key '${{secrets.APIKEY}}'
