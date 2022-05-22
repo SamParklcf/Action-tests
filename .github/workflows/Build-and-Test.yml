@@ -23,7 +23,7 @@ jobs:
       run: dotnet restore ./ClassLibrary1/
     
     - name: Build
-      run: dotnet build --configuration Release --no-restore --collect "Code Coverage" ./ClassLibrary1/
+      run: dotnet build --configuration Release --no-restore ./ClassLibrary1/
       
     - name: Test
-      run: dotnet test --no-restore ./ClassLibrary1/
+      run: dotnet test --no-restore --collect "Code Coverage" ./ClassLibrary1/
