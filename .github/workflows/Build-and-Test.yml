@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    - name: List all projects
+      run: dotnet sln Project.Remedy.sln list
+    
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
