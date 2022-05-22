@@ -30,4 +30,4 @@ jobs:
       run: dotnet build --configuration Release --no-restore ./ClassLibrary1/ClassLibrary1.sln
       
     - name: Test
-      run: dotnet test --no-restore --collect "Code Coverage" ./ClassLibrary1/ClassLibrary1.sln
+      run: dotnet test --no-restore --collect "Code Coverage" --logger "console;verbosity=detailed" ./ClassLibrary1/ClassLibrary1.sln
