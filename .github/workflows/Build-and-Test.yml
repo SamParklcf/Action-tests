@@ -31,3 +31,6 @@ jobs:
       
     - name: Test
       run: dotnet test --no-restore --collect "Code Coverage" --logger "console;verbosity=detailed" ./ClassLibrary1/ClassLibrary1.sln
+      
+    - name: Pack ClassLibrary1
+      run: dotnet pack --output nupkgs --configuration Release ./ClassLibrary1/ClassLibrary1.csproj
