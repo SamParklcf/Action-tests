@@ -24,10 +24,10 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Restore
-      run: dotnet restore ./ClassLibrary1/
+      run: dotnet restore ./ClassLibrary1/ClassLibrary1.sln
     
     - name: Build
-      run: dotnet build --configuration Release --no-restore ./ClassLibrary1/
+      run: dotnet build --configuration Release --no-restore ./ClassLibrary1/ClassLibrary1.sln
       
     - name: Test
-      run: dotnet test --no-restore --collect "Code Coverage" ./ClassLibrary1/
+      run: dotnet test --no-restore --collect "Code Coverage" ./ClassLibrary1/ClassLibrary1.sln
